@@ -57,9 +57,9 @@ $ vibinremote --config keymap.json
 2023-10-04T16:04:36 [INFO] Using vibin at: vibin.local:8080 (http timeout: 1s)
 2023-10-04T16:04:36 [INFO] Registered 2 keys for intercept
 2023-10-04T16:04:36 [INFO] Vibin remote active...
-2023-10-04T16:04:37 [INFO] UpArrow -> http://192.168.2.101:8080/api/system/amplifier/volume/up
-2023-10-04T16:04:38 [INFO] UpArrow -> http://192.168.2.101:8080/api/system/amplifier/volume/up
-2023-10-04T16:04:39 [INFO] DownArrow -> http://192.168.2.101:8080/api/system/amplifier/volume/down
+2023-10-04T16:04:37 [INFO] UpArrow -> http://vibin.local:8080/api/system/amplifier/volume/up
+2023-10-04T16:04:38 [INFO] UpArrow -> http://vibin.local:8080/api/system/amplifier/volume/up
+2023-10-04T16:04:39 [INFO] DownArrow -> http://vibin.local:8080/api/system/amplifier/volume/down
 ```
 
 [Vibin]: https://github.com/mjoblin/vibin
