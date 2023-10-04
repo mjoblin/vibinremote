@@ -1,0 +1,12 @@
+{
+    "vibin": "vibin.local:8080",
+    "request_timeout": 1,
+    "keymap": {
+        "UpArrow": {
+            "url": "/api/system/amplifier/volume/up"
+        },
+        "DownArrow": {
+            "url": "/api/system/amplifier/volume/down"
+        }
+    }
+}
