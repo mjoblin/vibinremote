@@ -27,7 +27,7 @@ fn main() {
             writeln!(
                 buf,
                 "{} [{}] {}",
-                Local::now().format("%Y-%m-%dT%H:%M:%S"),
+                Local::now().format("%Y-%m-%dT%H:%M:%S%.3f"),
                 record.level(),
                 record.args()
             )

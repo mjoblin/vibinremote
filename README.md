@@ -53,13 +53,15 @@ Options:
 ### Example
 
 ```
-$ vibinremote --config keymap.json
-2023-10-04T16:04:36 [INFO] Using vibin at: vibin.local:8080 (http timeout: 1s)
-2023-10-04T16:04:36 [INFO] Registered 2 keys for intercept
-2023-10-04T16:04:36 [INFO] Vibin remote active...
-2023-10-04T16:04:37 [INFO] UpArrow -> http://vibin.local:8080/api/system/amplifier/volume/up
-2023-10-04T16:04:38 [INFO] UpArrow -> http://vibin.local:8080/api/system/amplifier/volume/up
-2023-10-04T16:04:39 [INFO] DownArrow -> http://vibin.local:8080/api/system/amplifier/volume/down
+$ vibinremote --config sample_keymap.json
+2023-10-05T09:52:45.941 [INFO] Using vibin at: vibin.local:8080 (http timeout: 1s)
+2023-10-05T09:52:45.941 [INFO] Registered 2 keys for intercept
+2023-10-05T09:52:45.941 [INFO] Listening for key presses...
+2023-10-05T09:52:50.033 [INFO] UpArrow -> http://vibin.local:8080/api/system/amplifier/volume/up
+2023-10-05T09:52:50.974 [INFO] UpArrow -> http://vibin.local:8080/api/system/amplifier/volume/up
+2023-10-05T09:52:51.237 [INFO] UpArrow -> http://vibin.local:8080/api/system/amplifier/volume/up
+2023-10-05T09:52:52.036 [INFO] DownArrow -> http://vibin.local:8080/api/system/amplifier/volume/down
+2023-10-05T09:52:53.163 [INFO] DownArrow -> http://vibin.local:8080/api/system/amplifier/volume/down
 ```
 
 [Vibin]: https://github.com/mjoblin/vibin

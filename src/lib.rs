@@ -68,7 +68,7 @@ fn process_keypresses(
                         code => error!("HTTP error [{code}] {url}"),
                     }
                 }
-                Err(e) => error!("error: {e}"),
+                Err(e) => error!("{e}"),
             }
         }
     });
@@ -91,7 +91,7 @@ fn process_keypresses(
         }
     };
 
-    info!("Vibin remote active...");
+    info!("Listening for key presses...");
 
     // Listen for key presses. This blocks until the main thread is cancelled.
     if let Err(error) = listen(keypress_listener) {
