@@ -9,7 +9,7 @@ use std::sync::mpsc;
 
 use http::status::{StatusCode};
 use log::{error, info};
-use rdev::{listen, Event, EventType, Key};
+use rdev::{grab, Event, EventType, Key};
 use reqwest;
 use serde::{Deserialize};
 
@@ -75,7 +75,7 @@ fn process_keypresses(
 
     // Keypress listener. Listens for registered key presses, takes the associated URL for the
     // registered key, and sends the URLs to the URL executor.
-    let keypress_listener = move |event: Event| {
+    let keypress_listener = move |event: Event| -> Option<Event> {
         match event.event_type {
             EventType::KeyRelease(key) => {
                 if let Some(key_config) = key_to_keyconfig.get(&key) {
@@ -89,12 +89,14 @@ fn process_keypresses(
             }
             _ => {}
         }
+
+        Some(event)
     };
 
     info!("Listening for key presses...");
 
     // Listen for key presses. This blocks until the main thread is cancelled.
-    if let Err(error) = listen(keypress_listener) {
+    if let Err(error) = grab(keypress_listener) {
         error!("Keypress listener error: {:?}", error);
     }
 
