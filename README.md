@@ -65,3 +65,15 @@ $ vibinremote --config sample_keymap.json
 ```
 
 [Vibin]: https://github.com/mjoblin/vibin
+
+## Building on a Raspberry Pi
+
+`vibinremote` has been tested on a Raspberry Pi 4 running Ubuntu Desktop 23.04. It runs
+successfully with sudo from an X11-based terminal, but will not run over a headless ssh session.
+
+Compiling on the Pi requires [Rust](https://www.rust-lang.org/tools/install) to be installed, along
+with the following packages:
+
+```
+apt install build-essential libevdev-dev libssl-dev libx11-dev libxi-dev libxtst-dev pkg-config
+```
